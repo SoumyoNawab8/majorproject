@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+.carousel-item {
+    height: 100% !important;
+}
+
+#ProductCard{ box-shadow: none !important;}
+#carsl-text{
+    margin-bottom: 5em;
+    margin-left: -38% !important;
+    /* background-color: white; */
+    font-size: 1.7em;
+}
+a.btn.btn-assistance.waves-effect {
+    /* border: 2px solid #33b5e5!important; */
+    border: 0px solid white ;
+    background-color: transparent!important;
+    color: white !important;
+     /*box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); */
+	box-shadow: none;
+}
+.animated.fadeIn h3,.animated.fadeIn p{
+ font-family: 'Lato', sans-serif !important;
+}
+video.video-cover{width: -webkit-fill-available;}
+.navbar{ box-shadow: none; }
+a.nav-item.nav-link{ color: white !important; }
+
+/*.view img.d-block.w-100{}*/
+img.d-block.w-100 {
+    margin-top: -12em !important;
+}
+main{
+	margin-top: 2em;
+}
+header ::after{display:none !important;}
+/*main section.hm_carsal{margin-bottom: 6em;}*/
+.nav-bx-shdw{ box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); }
+
+/*Login page*/
+span.counter {
+    margin-left: -0.6em;
+    margin-top: -0.7em;
+}
+
+h4#homedTitle{ font-weight: 150; font-size: 0.9em; }
+
+.short_dem{
+     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:225px;
+}
+
+/*main.login_pg{
+	
+}
+*/.login_pg div.container div.row{margin-top: 9em; padding-bottom: 10em;}
+.reg_usr div.container div.row{margin-top: 9em; padding-bottom: 7em;}
+.redValidate{color:red; margin-left:2.3em;}
+div.cartItem{ margin-left: -6em; }
+/* for search page*/
+.search_product_page{margin-top: 5em;}
+/*Footer style*/
+footer{margin-top: 3em;}
+/*for admin page*/
+    .parallax {
+    /* The image used */
+    background-image: url('<?php echo base_url();?>img/admin_view.jpeg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 22em;
+}
+    .parallax2{
+    background-image: url('<?php echo base_url();?>img/admin_view2.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15em;
+}
+ .parallax h2{
+    color:white; font-size: 6em; text-shadow: 1px 1px lightslategrey; animation-delay: 1s;
+ }
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}

@@ -1,0 +1,10 @@
+.carousel-item {
+    height: 450px !important;
+}
+.navbar{ box-shadow: none; }
+a.nav-item.nav-link{ color: white !important; }
+nav.navbar.navbar-expand-lg.navbar-dark.primary-color.fixed-top.scrolling-navbar{ background: transparent !important; }
+main{
+	margin-top: 2em;
+}
+.nav-bx-shdw{ box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); }
