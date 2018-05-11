@@ -9,7 +9,7 @@
 		 		$data['title'] = ucfirst($page);
 
 			$data['Product'] = $this->product_model->get_products();
-            $data1['admin'] = $this->admin_model->get_admin();
+            $data['admin'] = $this->admin_model->get_admin();
 
 			$this->load->helper('url');
 			$this->load->helper('html');

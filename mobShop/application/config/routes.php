@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['posts'] = 'posts/index';
+$route['items/(:any)'] = 'posts/view/$1';
+$route['items'] = 'posts/index';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';

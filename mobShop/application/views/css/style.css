@@ -3,7 +3,7 @@
 .carousel-item {
     height: 100% !important;
 }
-
+.top_nav{margin-top: 6em;}
 #ProductCard{ box-shadow: none !important;}
 #carsl-text{
     margin-bottom: 5em;
@@ -51,7 +51,9 @@ h4#homedTitle{ font-weight: 150; font-size: 0.9em; }
     text-overflow: ellipsis;
     width:225px;
 }
-
+.prod_adv1{
+    margin-top:-5em;
+}
 /*main.login_pg{
 	
 }

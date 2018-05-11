@@ -102,11 +102,7 @@
         		<div class="col-md-9">
         <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-            <!--Controls-->
-            <!-- <div class="controls-top">
-                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-            </div> -->
+           
             <!--/.Controls-->
 
             <!--Indicators-->
@@ -158,10 +154,15 @@
                                 <!--Category & Title-->
                                 <h5><?php echo $item['Brand']; ?></h5>
                                 <!-- Item name -->
-                                <?php $itemName=explode("(",$item['Name']);
+                                <?php 
+                                // Getting the Item name by separating the '(' opening bracket
+                                $itemName=explode("(",$item['Name']);
+
+                                $itemLink=explode(" ", $itemName[0]);
+
                                 if($itemName[1]!=""):
                                 ?>
-                                <h4 class="card-title" id="homedTitle"><strong><a href=""><?php echo $itemName[0];?></a></strong></h4>
+                                <h4 class="card-title" id="homedTitle"><strong><a href="<?php echo site_url('items/'.$itemLink[0].' '.$item['ID']); // echo $itemName[0]; ?>"><?php echo $itemName[0];?></a></strong></h4>
                                 <?php else:?>
                                     <h4 class="card-title" id="homedTitle"><strong><a href=""><?php echo $item['Name'];?></a></strong></h4>
                                 <?php endif; ?>
@@ -175,7 +176,7 @@
                                 <!--Card footer-->
                                 <div class="card-footer">
                                     <span class="float-left">₹<?php echo $item['Price'];?> <span class="discount"><?php if($item['Old_Price']!=0):?><strike>₹<?php echo $item['Old_Price'];?></strike><?php endif;?></span></span>
-                                    <span class="float-right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="zmdi zmdi-shopping-cart-plus zmdi-hc-lg"></i></a></span>
+                                    <span class="float-right"><a data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="zmdi zmdi-shopping-cart-plus zmdi-hc-lg"></i></a></span>
                                 </div>
 
                             </div>
@@ -218,9 +219,11 @@
                                 <h5><?php echo $item['Brand']; ?></h5>
                                 <!-- Item name -->
                                 <?php $itemName=explode("(",$item['Name']);
+                                 $itemLink=explode(" ", $itemName[0]);
+
                                 if($itemName[1]!=""):
                                 ?>
-                                <h4 class="card-title" id="homedTitle"><strong><a href=""><?php echo $itemName[0];?></a></strong></h4>
+                                <h4 class="card-title" id="homedTitle"><strong><a href="<?php echo site_url('items/'.$itemLink[0].' '.$item['ID']);?>"><?php echo $itemName[0];?></a></strong></h4>
                                 <?php else:?>
                                     <h4 class="card-title" id="homedTitle"><strong><a href=""><?php echo $item['Name'];?></a></strong></h4>
                                 <?php endif; ?>
@@ -234,7 +237,7 @@
                                 <!--Card footer-->
                                 <div class="card-footer">
                                     <span class="float-left">₹<?php echo $item['Price'];?> <span class="discount"><?php if($item['Old_Price']!=0):?><strike>₹<?php echo $item['Old_Price'];?></strike><?php endif;?></span></span>
-                                    <span class="float-right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="zmdi zmdi-shopping-cart-plus zmdi-hc-lg"></i></a></span>
+                                    <span class="float-right"><a data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="zmdi zmdi-shopping-cart-plus zmdi-hc-lg"></i></a></span>
                                 </div>
 
                             </div>
@@ -251,7 +254,11 @@
 
             </div>
             <!--/.Slides-->
-
+          <!--Controls-->
+            <div class="controls-top">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
         </div>
         <!--/.Carousel Wrapper-->
         </div>

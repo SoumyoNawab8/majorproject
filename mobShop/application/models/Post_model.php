@@ -4,14 +4,13 @@
 		 	$this->load->database();
 		 }
 
-		 public function get_posts($slug = FALSE){
-		 	if($slug === FALSE){
-		 		$query = $this->db->get('Posts');
+		 Public function get_products($price = FALSE){
+		 	if($price === FALSE){
+		 		$query = $this->db->get('Product');
 		 		return $query->result_array();
 		 	}
-		 
-		 	$query = $this->db->get_where('UserLog', array('id' => $id));
-		 	// $query = $this->db->get_where('Product', array('id' => $id));
+		 	$query = $this->db->get_where('Product', array('id' => $id));
+		 		return $query->row_array();
 		 }
 	}
 	
