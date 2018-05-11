@@ -76,12 +76,12 @@
             <div class="md-form mt-0 dropdown">
                <!--  <ul>
                     <li> -->
- <!--             <?php  //if(isset($_COOKIE["login"])): if ($_COOKIE["login"] == "admin" ) : ?>
-                <input type="hidden" id="siteUrl" value="<?php // echo base_url();?>">
-                <button class="nav-item nav-link" onclick="logout($('input#siteUrl').val);" style="    margin-top: -2em;
+             <?php  if($this->session->userdata('logged_in')) : ?>
+                <input type="hidden" id="siteUrl" value="<?php echo base_url();?>">
+                <a class="nav-item nav-link" href="<?php echo base_url();?>logout" style="    margin-top: -2em;
     background: transparent;
-    color: white;">Logout</button>
-             <?php // else:?> -->
+    color: white;">Logout</a>
+             <?php  else:?>
                 <a class="nav-item nav-link dropdown-toggle" id="cartDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-shopping-cart zmdi-hc-lg"></i><span class="counter ">3</span></a>
                 <div class="dropdown-menu dropdown-primary cartItem" aria-labelledby="cartDrop" >
                     <a class="dropdown-item" href="#">Product1</a>
@@ -89,7 +89,7 @@
                     <a class="dropdown-item" href="#">Product3</a>
                     <a class="dropdown-item" href="<?php echo base_url();?>cart"><b>View All...</b></a>
                 </div>
-            <!-- <?php// endif; endif; ?> -->
+            <?php endif; //endif; ?> 
             <!-- </li>
             </ul> -->
             </div>
@@ -100,3 +100,4 @@
 </nav>
 <!--/.Navbar-->
  </header>
+

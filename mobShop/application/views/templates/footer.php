@@ -1,6 +1,6 @@
  
 
-<?php if (isset($_COOKIE["login"])) : if($_COOKIE["login"] == "admin" ):?>
+<?php if ($this->session->userdata('logged_in')) : ?>
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-lg red">
         <i class="fa fa-pencil"></i>
@@ -13,7 +13,7 @@
         <li><a class="btn-floating blue"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
 </div>
-<?php endif; endif; ?>
+<?php endif; //endif; ?>
 <!--Footer-->
 <footer class="page-footer foot-def font-small unique-color-dark pt-0">
 

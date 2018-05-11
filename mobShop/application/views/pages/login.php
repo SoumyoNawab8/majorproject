@@ -9,6 +9,9 @@ h2{padding-top: 5em; padding-bottom: 5em;}
 </style>
 <main class="login_pg">
 	<div class="container">
+		 <?php if($this->session->flashdata('login_failed')):?>
+    <?php echo '<p>'.$this->session->flashdata('post_deleted').'</p>';?>
+ <?php  endif;?>
 		<br><br>
 		<div class="row">
 			<div class="col-md-4">
@@ -22,28 +25,28 @@ h2{padding-top: 5em; padding-bottom: 5em;}
 				    <div class="card-body">
 						<div id="non-logged">
 				        <!-- Material form register -->
-				        <form>
+				        <?php echo form_open('login'); ?>
 				            <p class="h4 text-center py-4">Sign in</p>
 
 				            <!-- Material input email -->
 				            <div class="md-form">
 				                <i class="fa fa-envelope prefix grey-text"></i>
-				                <input type="email" id="UserEmail" class="form-control">
+				                <input type="email" id="UserEmail" name="username" class="form-control">
 				                <label for="UserEmail" class="font-weight-light">Your email</label>
 				            </div>
 
 				            <!-- Material input password -->
 				            <div class="md-form">
 				                <i class="fa fa-lock prefix grey-text"></i>
-				                <input type="password" id="UserPassword" class="form-control">
+				                <input type="password" name="password" id="UserPassword" class="form-control">
 				                <label for="UserPassword" class="font-weight-light">Your password</label>
 				            </div>
 
 				            <div class="text-center py-4 mt-3">
-				                <button class="btn btn-cyan" id="Loginbtn" type="button" onclick="UserLogin($('#UserEmail').val(),$('#UserPassword').val(),$('input#siteUl').val());">Sign in</button>
+				                <button class="btn btn-cyan" id="Loginbtn" type="submit" >Sign in</button>
 				            </div>
 				            <input type="hidden" id="siteUl" value="<?php echo base_url(); ?>">
-				        </form>
+				        <?php echo form_close();?>
 				        <!-- Material form register -->
 						New here? <a href="<?php echo base_url();?>registration">click to register</a>
 					</div>
